@@ -1,2 +1,2 @@
-create database CLIENTES
+create database BASEDEDADOS
 go
