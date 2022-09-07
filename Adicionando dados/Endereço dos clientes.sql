@@ -1,0 +1,14 @@
+use BASEDEDADOS
+
+insert into ENDERECO_CLIENTES values
+('E1','CIDADE1','RUA1',1),
+('E1','CIDADE2','RUA2',2),
+('E2','CIDADE3','RUA3',3),
+('E3','CIDADE4','RUA4',4),
+('E4','CIDADE5','RUA5',5),
+('E3','CIDADE4','RUA6',6),
+('E5','CIDADE6','RUA7',7),
+('E4','CIDADE7','RUA8',8)
+
+
+go
