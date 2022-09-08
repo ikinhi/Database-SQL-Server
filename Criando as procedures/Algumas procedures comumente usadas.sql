@@ -1,0 +1,36 @@
+use BASEDEDADOS
+
+/* PROCEDURES BÁSICAS */
+
+create proc PROCCLIENTES
+as
+	select * from CLIENTES
+go
+
+create proc PROCPRODUTOS
+as
+	select * from PRODUTOS
+go
+
+create proc PROCVENDEDORES
+as
+	select * from VENDEDORES
+go
+
+/* PROCEDURES COM PARÂMETROS */
+
+create proc ENDERECO_CLIENTES_ESTADO @ESTADO char(2)
+as
+	select C.PRIMEIRO_NOME, C.SOBRENOME, EC.ESTADO from CLIENTES C
+	inner join ENDERECO_CLIENTES EC
+	on C.IDCLIENTE = EC.ID_CLIENTE
+	where EC.ESTADO = @ESTADO
+go
+
+create proc TELEFONE_CLIENTES_TIPO @TIPO CHAR(3)
+as
+	select C.PRIMEIRO_NOME, C.SOBRENOME, TC.TIPO from CLIENTES C
+	inner join TELEFONE_CLIENTES TC
+	on C.IDCLIENTE = TC.ID_CLIENTE
+	where TC.TIPO = @TIPO
+go
