@@ -1,0 +1,9 @@
+use BASEDEDADOS
+
+set identity_insert BASEDEDADOS.DBO.HISTORICODEPRECO on
+
+update PRODUTOS
+set PRECO = 5
+where IDPRODUTO = 3
+
+go
